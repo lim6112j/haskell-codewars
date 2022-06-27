@@ -10,7 +10,7 @@ toCamelCase = foldr func acc
     func x [] = [x]
     func '-' acc@(h:xs) = toUpper h:xs
     func '_' acc@(h:xs) = toUpper h:xs
-    func x s@(h:xs) = x : s 
+    func x s = x : s 
     -- func x []
       -- | x == '-' = []
       -- | otherwise = [x]
